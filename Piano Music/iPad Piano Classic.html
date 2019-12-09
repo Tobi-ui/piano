@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <title> Piano Music Classic </title> 
+        <link rel="shortcut icon" href="Nota.png">
+        <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+            <style>
+                body {
+                    background: url(Classic.png);
+                    background-size: cover;
+                    margin-left: 0;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;}
+
+
+                .text {             
+                    padding-top: 7%;}
+
+                .font {border-style: solid;}
+
+                .font1 {/*border-style: solid;*/
+                    padding: 3%;
+                    list-style-type: none;  
+                    color: hsl(36, 79%, 43%);
+                    font-family: 'Merienda One'; 
+                    font-size: 4.5vw;}
+
+                .font2 {/*border-style: solid;*/
+                    width: 60%;
+                    padding: 3%;
+                    margin-bottom: 25%;                       /*Cambia para que quepe el texto del Tooltip*/
+                    list-style-type: none;  
+                    color: hsl(36, 79%, 43%);
+                    font-family: 'Calligraffitti'; 
+                    font-size: 2.5vw;}
+
+                .font2:hover {
+                    color: hsl(36, 84%, 60%)}
+
+                table {background: url(Piano Music/Frozen.jpg);
+                    padding: 0;
+                    border-collapse: collapse; 
+                    width: fixed;}
+
+                th {
+                    height: 30vw;
+                    padding-top: 1vw;
+                    padding-bottom: 1vw;
+                    border-bottom: 1px solid white;}
+
+                td {
+                    height: 30vw;
+                    padding-top: 1vw;    
+                    padding-bottom: 1vw;              
+                    border-bottom: 1px solid white;}              
+
+                ul {
+                    padding: 2%;
+                    list-style-type: none;
+                    overflow: hidden;}
+
+                iframe {
+                    padding: 0;
+                    width: 60vw;
+                    height: 34vw;}
+
+                .textTooltip {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip .tooltiptext {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 21vw;
+                    background-color: rgba(255, 201, 120, 0.3);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip .tooltiptext::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(255, 201, 120, 0.3) transparent transparent;}
+
+                .tooltip:hover .tooltiptext {
+                    visibility: visible;}
+
+                .textTooltip1 {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip1 {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip1 .tooltiptext1 {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 18vw;
+                    background-color: rgba(255, 201, 120, 0.3);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip1 .tooltiptext1::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(255, 201, 120, 0.3) transparent transparent;}
+
+                .tooltip1:hover .tooltiptext1 {
+                    visibility: visible;}
+
+                .textTooltip2 {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip2 {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip2 .tooltiptext2 {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 14vw;
+                    background-color: rgba(255, 201, 120, 0.3);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip2 .tooltiptext2::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(255, 201, 120, 0.3) transparent transparent;}
+
+                .tooltip2:hover .tooltiptext2 {
+                    visibility: visible;}                
+
+                /* Style the tab */
+                .tab {
+                    z-index: 1;      
+                    list-style-type: none;                   
+                    width: 100%;
+                    top: 0;
+                    padding-top: 1%;
+                    padding-left: 5%; 
+                    padding-bottom: 1%;               
+                    background-color: rgba(0, 0, 0, 0.8);
+                    -webkit-columns: 0px 5; /* Chrome, Safari, Opera */
+                    -moz-columns: 0px 5; /* Firefox */
+                    columns: 5;
+                    position: fixed;}
+
+                /* Style the buttons inside the tab */
+                li a {
+                    font-family: 'Merienda One';
+                    font-size: 2.5vw;
+                    color: white;               
+                    text-decoration: none;                           
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    width: 67%; }
+
+                /* Change background color of buttons on hover */
+                li a:hover {
+                    color: hsl(36, 92%, 62%)}
+
+                .active {
+                    color: hsl(36, 79%, 43%)}
+
+            </style>
+    </head>  
+    <body>
+          <div class="tab">
+            <li><a href="All.html" target="_blank">All</a></li>
+            <li><a class="active" href="iPad Piano Classic.html" target="_blank">Classic</a></li>
+            <li><a href="iPad Piano Ghibli.html" target="_blank">Ghibli</a></li>
+            <li><a href="iPad Piano Movies.html" target="_blank">Movies</a></li>
+            <li><a href="iPad Piano Anthems.html" target="_blank">Anthems</a></li>
+        </div>
+
+        <div id="Classic" class="tabcontent">
+            <div class="text">
+                <table>
+                    <tr>
+                        <td><ul><div class="font1"> Can Can </div><br>
+                            <div class="font2"><div class="tooltip2"> Jacques Offenbach <span class="tooltiptext2"> <div class="textTooltip2">Jacques Offenbach was a German-born French composer, cellist and impresario of the romantic period. He is remembered for his nearly 100 operettas of the 1850s–1870s and his uncompleted opera The Tales of Hoffmann.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/229736445" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Eine Kleine Nachtmusik</div><br>
+                            <div class="font2"><div class="tooltip"> Mozart <span class="tooltiptext"> <div class="textTooltip">Wolfgang Amadeus Mozart, baptised as Johannes Chrysostomus Wolfgangus Theophilus Mozart, was a prolific and influential composer of the Classical era. Born in Salzburg, he showed prodigious ability from his earliest childhood.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221080393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                       
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">F&#252;r Elise</div><br>
+                            <div class="font2"><div class="tooltip"> Beethoven <span class="tooltiptext"> <div class="textTooltip">Ludwig van Beethoven was a German composer and pianist. A crucial figure in the transition between the Classical and Romantic eras in Western art music, he remains one of the most famous and influential of all composers.</span></div></div></div></ul></td>
+                        <th>                                       
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221081383" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                    
+                    </tr> 
+                    <tr>
+                        <td><ul><div class="font1">Kalinka</div><br>
+                            <div class="font2"><div class="tooltip1"> Ivan Larionov <span class="tooltiptext1"> <div class="textTooltip1">Ivan Petrovich Larionov was a Russian composer, writer and folklorist. He is mostly remembered for the famous song "Kalinka", which he wrote in 1860. Larionov was born to a noble family in Perm, and studied music in Moscow.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/226569573" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>  
+                    <tr>
+                        <td><ul><div class="font1">Katyusha</div><br>
+                            <div class="font2"><div class="tooltip1"> Matvey Blanter <span class="tooltiptext1"> <div class="textTooltip1">Matvei Isaakovich Blanter was one of the most prominent composers of popular songs and film music in the Soviet Union. Among many other works, he wrote the internationally famous "Katyusha", performed to this day internationally.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/225691324" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>                         
+                    <tr>
+                        <td><ul><div class="font1">Korobeiniki</div><br>
+                            <div class="font2"><div class="tooltip1"> Nikolay Nekrasov <span class="tooltiptext1"> <div class="textTooltip1">Nikolay Alexeyevich Nekrasov was a Russian poet, writer, critic and publisher, whose deeply compassionate poems about peasant Russia made him the hero of liberal and radical circles of Russian intelligentsia.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221146891" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Minuet in G Major</div><br>
+                            <div class="font2"><div class="tooltip"> Bach <span class="tooltiptext"> <div class="textTooltip">Johann Sebastian Bach was a German composer and musician of the Baroque period. Bach's compositions include the Brandenburg Concertos, the Goldberg Variations, the Mass in B minor, two Passions, and over three hundred cantatas of which approximately two hundred survive.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/227718652" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>
+                    </tr>                              
+                    <tr>
+                        <td><ul><div class="font1">Ode To Joy</div><br>
+                            <div class="font2"><div class="tooltip"> Beethoven <span class="tooltiptext"> <div class="textTooltip">Ludwig van Beethoven was a German composer and pianist. A crucial figure in the transition between the Classical and Romantic eras in Western art music, he remains one of the most famous and influential of all composers.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221147058" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Spring</div><br>
+                            <div class="font2"><div class="tooltip"> Vivaldi <span class="tooltiptext"> <div class="textTooltip">Antonio Lucio Vivaldi was an Italian Baroque composer, virtuoso violinist, teacher and cleric. Born in Venice, he is recognized as one of the greatest Baroque composers, and his influence during his lifetime was widespread across Europe. His best-known work is a series of violin concertos known as The Four Seasons.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/226029273" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Swan Lake</div><br>
+                            <div class="font2"><div class="tooltip"> Tchaikovsky <span class="tooltiptext"> <div class="textTooltip">Pyotr Ilyich Tchaikovsky was a Russian composer of the late-Romantic period, some of whose works are among the most popular music in the classical repertoire. He was the first Russian composer whose music made a lasting impression internationally, bolstered by his appearances as a guest conductor in Europe and the United States.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221704331" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">The British Grenadiers</div><br>
+                            <div class="font2"><div class="tooltip"> Britain <span class="tooltiptext"> <div class="textTooltip">"The British Grenadiers" is a traditional marching song of British and Canadian military units whose badge of identification features a grenade, the tune of which dates from the 17th century. It is the Regimental Quick March of the Royal Artillery (since 1716).</span></div></div></div></ul></td>
+                        <th>
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221411884" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Turkish March</div><br>
+                            <div class="font2"><div class="tooltip1"> Mozart <span class="tooltiptext1"> <div class="textTooltip1">Wolfgang Amadeus Mozart, baptised as Johannes Chrysostomus Wolfgangus Theophilus Mozart, was a prolific and influential composer of the Classical era. Born in Salzburg, he showed prodigious ability from his earliest childhood.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/230261182" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>     
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body> 
+</html>
