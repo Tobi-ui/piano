@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <title> Piano Music Movies </title> 
+        <link rel="shortcut icon" href="Nota.png">
+        <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+            <style>
+                body {
+                    background: url(Movies.png);
+                    background-size: cover;
+                    margin-left: 0;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;}
+
+
+                .text {             
+                    padding-top: 7%;}
+
+                .font {border-style: solid;}
+
+                .font1 {/*border-style: solid;*/
+                    padding: 3%;
+                    list-style-type: none;  
+                    color: hsl(162, 100%, 57%);
+                    font-family: 'Merienda One'; 
+                    font-size: 4.5vw;}
+
+                .font2 {/*border-style: solid;*/
+                    width: 60%;
+                    padding: 3%;
+                    margin-bottom: 25%;                       /*Cambia para que quepe el texto del Tooltip*/
+                    list-style-type: none;  
+                    color: hsl(162, 100%, 57%);
+                    font-family: 'Calligraffitti'; 
+                    font-size: 2.5vw;}
+
+                .font2:hover {
+                    color: hsl(156, 98%, 42%);}
+
+                table {background: url(Piano Music/Frozen.jpg);
+                    padding: 0;
+                    border-collapse: collapse; 
+                    width: fixed;}
+
+                th {
+                    height: 30vw;
+                    padding-top: 1vw;
+                    padding-bottom: 1vw;
+                    border-bottom: 1px solid white;}
+
+                td {
+                    height: 30vw;
+                    padding-top: 1vw;    
+                    padding-bottom: 1vw;              
+                    border-bottom: 1px solid white;}              
+
+                ul {
+                    padding: 2%;
+                    list-style-type: none;
+                    overflow: hidden;}
+
+                iframe {
+                    padding: 0;
+                    width: 60vw;
+                    height: 34vw;}
+
+                .textTooltip {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip .tooltiptext {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 21vw;
+                    background-color: rgba(120, 255, 197, 0.3);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip .tooltiptext::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(120, 255, 197, 0.3) transparent transparent;}
+
+                .tooltip:hover .tooltiptext {
+                    visibility: visible;}
+
+                .textTooltip1 {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip1 {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip1 .tooltiptext1 {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 18vw;
+                    background-color: rgba(120, 255, 197, 0.3);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip1 .tooltiptext1::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(120, 255, 197, 0.3) transparent transparent;}
+
+                .tooltip1:hover .tooltiptext1 {
+                    visibility: visible;}
+
+                .textTooltip2 {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip2 {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip2 .tooltiptext2 {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 14vw;
+                    background-color: rgba(120, 255, 197, 0.3);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip2 .tooltiptext2::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(120, 255, 197, 0.3) transparent transparent;}
+
+                .tooltip2:hover .tooltiptext2 {
+                    visibility: visible;}                
+
+                /* Style the tab */
+                .tab {
+                    z-index: 1;      
+                    list-style-type: none;                   
+                    width: 100%;
+                    top: 0;
+                    padding-top: 1%;
+                    padding-left: 5%; 
+                    padding-bottom: 1%;               
+                    background-color: rgba(0, 0, 0, 0.8);
+                    -webkit-columns: 0px 5; /* Chrome, Safari, Opera */
+                    -moz-columns: 0px 5; /* Firefox */
+                    columns: 5;
+                    position: fixed;}
+
+                /* Style the buttons inside the tab */
+                li a {
+                    font-family: 'Merienda One';
+                    font-size: 2.5vw;
+                    color: white;               
+                    text-decoration: none;                           
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    width: 67%; }
+
+                /* Change background color of buttons on hover */
+                li a:hover {
+                    color: hsl(156, 89%, 71%)}
+
+                .active {
+                    color: hsl(156, 98%, 42%)}
+
+            </style>
+    </head>  
+    <body>
+          <div class="tab">
+            <li><a href="iPad Piano All.html" target="_blank">All</a></li>
+            <li><a href="iPad Piano Classic.html" target="_blank">Classic</a></li>
+            <li><a href="iPad Piano Ghibli.html" target="_blank">Ghibli</a></li>
+            <li><a class="active" href="iPad Piano Movies.html" target="_blank">Movies</a></li>
+            <li><a href="iPad Piano Anthems.html" target="_blank">Anthems</a></li>
+        </div>
+
+        <div id="Movies" class="tabcontent">
+          <div class="text">
+                <table>
+                    <tr>
+                        <td><ul><div class="font1"> Conquest of Paradise </div><br>
+                            <div class="font2"><div class="tooltip"> Vangelis <span class="tooltiptext"> <div class="textTooltip">1492: Conquest of Paradise is a 1992 French-Spanish epic historical drama film directed by Ridley Scott and written by Roselyne Bosch, which tells the fictionalized story of the travels to the New World by the Italian explorer Christopher Columbus (Gérard Depardieu) and the effect this had on the indigenous peoples of the Americas.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/229736515" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Game of Thrones</div><br>
+                            <div class="font2"><div class="tooltip"> George R. R.<br>Martin <span class="tooltiptext"> <div class="textTooltip">George Raymond Richard Martin is an American novelist and short-story writer in the fantasy, horror, and science fiction genres, screenwriter, and television producer. He is best known for his international bestselling series of epic fantasy novels, A Song of Ice and Fire, which was later adapted into the critically acclaimed HBO series Game of Thrones.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/226569317" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Hair Up</div><br>
+                            <div class="font2"><div class="tooltip"> Trolls <span class="tooltiptext"> <div class="textTooltip">Trolls is a 2016 American 3D computer-animated romantic musical fantasy comedy film based on the Troll dolls created by Thomas Dam. The film features the voices of Justin Timberlake, Zooey Deschanel and James Corden. The film revolves around two trolls on a quest to save their village from destruction by the Bergens, creatures who eat trolls.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/228551617" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Hedwig's Theme</div><br>
+                            <div class="font2"><div class="tooltip"> Harry Potter <span class="tooltiptext"> <div class="textTooltip">Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic, and subjugate all wizards and muggles, a reference term that means non-magical people.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/226015688" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Indiana Jones</div><br>
+                            <div class="font2"><div class="tooltip"> John Williams <span class="tooltiptext"> <div class="textTooltip">John Towner Williams is an American composer, conductor, and pianist. With a career spanning over six decades he has composed some of the most popular and recognizable film scores in cinematic history and highest-grossing films of all time, including the Star Wars series, the Indiana Jones series and the Jurassic Park films.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/224782021" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr> 
+                    <tr>
+                        <td><ul><div class="font1">Krasnaya Shapochka</div><br>
+                            <div class="font2"><div class="tooltip1"> Alexey Rybnikov <span class="tooltiptext1"> <div class="textTooltip1">Alexey Lvovich Rybnikov is a modern Russian composer. He is the author of music for the first Soviet and Russian musicals, for numerous plays and operas, for more than 80 Russian movies. More than 10 millions discs with his music have been sold to 1989.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/228552965" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Let It Go</div><br>
+                            <div class="font2"><div class="tooltip"> Frozen <span class="tooltiptext"> <div class="textTooltip">Frozen is a 2013 American 3D computer-animated musical fantasy film produced by Walt Disney Animation Studios. Inspired by Hans Christian Andersen's fairy tale "The Snow Queen".</span></div></div></div></ul></td>
+                        <th>                                       
+                            <iframe src="https://player.vimeo.com/video/226030249" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                    
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Pirates Of The Caribbean</div><br>
+                            <div class="font2"><div class="tooltip"> Hans Zimmer <span class="tooltiptext"> <div class="textTooltip">Hans Florian Zimmer  is a German film score composer and record producer. Since the 1980s, he has composed music for over 150 films. His works include The Lion King, the Pirates of the Caribbean series, The Thin Red Line, Gladiator, The Last Samurai, The Dark Knight Trilogy, Inception, and Interstellar.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/222030064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Ronja Rövardotter </div><br>
+                            <div class="font2"><div class="tooltip"> Ronjia <span class="tooltiptext"> <div class="textTooltip">Ronia, the Robber's Daughter is a Swedish fantasy film which was released to cinemas in Sweden on 14 December 1984,directed by Tage Danielsson, based on the 1981 novel of the same title by Astrid Lindgren, and adapted for the screen by Lindgren herself.</span></div></div></div></ul></td>
+                        <th>
+                             <iframe src="https://player.vimeo.com/video/226497919" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">See You Again</div><br>
+                            <div class="font2"><div class="tooltip"> Wiz Khalifa <span class="tooltiptext"> <div class="textTooltip">Cameron Jibril Thomaz, better known by his stage name Wiz Khalifa, is an American rapper, songwriter, and actor. In March 2015, he released "See You Again" for the soundtrack of the film Furious 7 and the song peaked at number one on the Billboard Hot 100 for 12 non-consecutive weeks.</span></div></div></div></ul></td>
+                        <th>
+                             <iframe src="https://player.vimeo.com/video/224766896" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Star Wars</div><br>
+                            <div class="font2"><div class="tooltip"> Star Wars <span class="tooltiptext"> <div class="textTooltip">Star Wars is a series of films created by George Lucas, which began in 1977. In 2012, The Walt Disney Company bought Lucasfilm for US$4.06 billion and earned the distribution rights to all subsequent Star Wars films.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/230258993" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Stranger Things</div><br>
+                            <div class="font2"><div class="tooltip1"> Stranger Things <span class="tooltiptext1"> <div class="textTooltip1">Stranger Things is an American science fiction-horror web television series. Set in the fictional town of Hawkins, Indiana in the 1980s, it focuses on the investigation into the disappearance of a young boy including the appearance of a girl who helps the missing boy's friends in their own search.</span></div></div></div></ul></td>
+                        <th>
+                             <iframe src="https://player.vimeo.com/video/228551558" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Svensk Filmindustri</div><br>
+                            <div class="font2"><div class="tooltip"> SF Studios <span class="tooltiptext"> <div class="textTooltip">SF Studios is a Swedish film production company, distributor and movie theatre chain, currently owned by the Bonnier Group. It was established on 27 December 1919 as Aktiebolaget Svensk Filmindustri or Svensk Filmindustri.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/226485510" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">The Jungle Book</div><br>
+                            <div class="font2"><div class="tooltip1">The Jungle Book <span class="tooltiptext1"> <div class="textTooltip1">The Jungle Book is a 2016 American fantasy adventure film, directed and co-produced by Jon Favreau, produced by Walt Disney Pictures, and written by Justin Marks. Based on Rudyard Kipling's eponymous collective works and inspired by Walt Disney's 1967 animated film of the same name.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/229752107" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">The Lord of the Rings</div><br>
+                            <div class="font2"><div class="tooltip1"> Howard Shore <span class="tooltiptext1"> <div class="textTooltip1">Howard Leslie Shore OC is a Canadian composer who is notable for his film scores. He has composed the scores for over 80 films, most notably the scores for The Lord of the Rings and The Hobbit film trilogies.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/224766860" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">The Simpsons</div><br>
+                            <div class="font2"><div class="tooltip"> The Simpsons <span class="tooltiptext"> <div class="textTooltip">The Simpsons is an American animated sitcom created by Matt Groening for the Fox Broadcasting Company. The series is a satirical depiction of a working-class life. The show is set in the fictional town of Springfield and parodies American culture, society, television, and the human condition.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/224779551" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">Titanic</div><br>
+                            <div class="font2"><div class="tooltip1"> James Horner <span class="tooltiptext1"> <div class="textTooltip1">James Roy Horner was an American composer, conductor and orchestrator of film scores. He was known for the integration of choral and electronic elements, and for his frequent use of motifs associated with Celtic music.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/224780849" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th> 
+                    </tr>
+                </table>                
+            </div>
+        </div>
+    </body> 
+</html>
