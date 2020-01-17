@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <title> Piano Music Ghibli </title> 
+        <link rel="shortcut icon" href="Nota.png">
+        <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+            <style>
+                body {
+                    background: url(Ghibli.png);
+                    background-size: cover;
+                    margin-left: 0;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;}
+
+
+                .text {             
+                    padding-top: 7%;}
+
+                .font {border-style: solid;}
+
+                .font1 {/*border-style: solid;*/
+                    padding: 3%;
+                    list-style-type: none;  
+                    color: hsl(120, 84%, 64%);
+                    font-family: 'Merienda One'; 
+                    font-size: 4.5vw;}
+
+                .font2 {/*border-style: solid;*/
+                    width: 60%;
+                    padding: 3%;
+                    margin-bottom: 25%;                       /*Cambia para que quepe el texto del Tooltip*/
+                    list-style-type: none;  
+                    color: hsl(120, 84%, 64%);
+                    font-family: 'Calligraffitti'; 
+                    font-size: 2.5vw;}
+
+                .font2:hover {
+                    color: hsl(120, 80%, 50%);}
+
+                table {background: url(Piano Music/Frozen.jpg);
+                    padding: 0;
+                    border-collapse: collapse; 
+                    width: fixed;}
+
+                th {
+                    height: 30vw;
+                    padding-top: 1vw;
+                    padding-bottom: 1vw;
+                    border-bottom: 1px solid white;}
+
+                td {
+                    height: 30vw;
+                    padding-top: 1vw;    
+                    padding-bottom: 1vw;              
+                    border-bottom: 1px solid white;}              
+
+                ul {
+                    padding: 2%;
+                    list-style-type: none;
+                    overflow: hidden;}
+
+                iframe {
+                    padding: 0;
+                    width: 60vw;
+                    height: 34vw;}
+
+                .textTooltip {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip .tooltiptext {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 21vw;
+                    background-color: rgba(115, 255, 115, 0.4);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip .tooltiptext::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(115, 255, 115, 0.4) transparent transparent;}
+
+                .tooltip:hover .tooltiptext {
+                    visibility: visible;}
+
+                .textTooltip1 {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip1 {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip1 .tooltiptext1 {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 18vw;
+                    background-color: rgba(115, 255, 115, 0.4);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip1 .tooltiptext1::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(115, 255, 115, 0.4) transparent transparent;}
+
+                .tooltip1:hover .tooltiptext1 {
+                    visibility: visible;}
+
+                .textTooltip2 {  
+                    padding-right: 3%;
+                    padding-left: 3%;
+                    text-align:justify;}
+
+                .tooltip2 {
+                    position: relative;
+                    display: inline-block;}
+
+                .tooltip2 .tooltiptext2 {
+                    font-family: 'Abel';
+                    font-size: 1.2vw;
+                    visibility: hidden;
+                    width: 14vw;
+                    background-color: rgba(115, 255, 115, 0.4);
+                    color: black;
+                    text-align: center;
+                    border-radius: 0.4vw;
+                    padding: 0.3vw 0;
+                    position: absolute;
+                    top: 0;
+                    left: 110%;}
+
+                .tooltip2 .tooltiptext2::after {
+                    content: "";
+                    position: absolute;
+                    top: 1.5vw;
+                    right: 100%;
+                    margin-top: -0.3vw;
+                    border-width: 0.5vw;
+                    border-style: solid;
+                    border-color: transparent rgba(115, 255, 115, 0.4) transparent transparent;}
+
+                .tooltip2:hover .tooltiptext2 {
+                    visibility: visible;}                
+
+                /* Style the tab */
+                .tab {
+                    z-index: 1;      
+                    list-style-type: none;                   
+                    width: 100%;
+                    top: 0;
+                    padding-top: 1%;
+                    padding-left: 5%; 
+                    padding-bottom: 1%;               
+                    background-color: rgba(0, 0, 0, 0.8);
+                    -webkit-columns: 0px 5; /* Chrome, Safari, Opera */
+                    -moz-columns: 0px 5; /* Firefox */
+                    columns: 5;
+                    position: fixed;}
+
+                /* Style the buttons inside the tab */
+                li a {
+                    font-family: 'Merienda One';
+                    font-size: 2.5vw;
+                    color: white;               
+                    text-decoration: none;                           
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    width: 67%; }
+
+                /* Change background color of buttons on hover */
+                li a:hover {
+                    color: hsl(120, 100%, 79%);}
+
+                .active {
+                    color: hsl(120, 80%, 50%);}
+
+            </style>
+    </head>  
+    <body>
+          <div class="tab">
+            <li><a href="iPad Piano All.html" target="_blank">All</a></li>
+            <li><a href="iPad Piano Classic.html" target="_blank">Classic</a></li>
+            <li><a class="active" href="iPad Piano Ghibli.html" target="_blank">Ghibli</a></li>
+            <li><a href="iPad Piano Movies.html" target="_blank">Movies</a></li>
+            <li><a href="iPad Piano Anthems.html" target="_blank">Anthems</a></li>
+        </div>
+
+        <div id="Ghibli" class="tabcontent">
+          <div class="text">
+                <table>
+                    <tr>
+                        <td><ul><div class="font1"> Always With Me </div><br>
+                            <div class="font2"><div class="tooltip"> Studio Ghibli <span class="tooltiptext"> <div class="textTooltip">Studio Ghibli, Inc. is a Japanese animation film studio based in Koganei, Tokyo, Japan. The studio is best known for its anime feature films, and has also produced several short films, television commercials, and one television film.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe width=1184 height=666 src="https://player.vimeo.com/video/221147132" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1"> Arrietty's Song </div><br>
+                            <div class="font2"><div class="tooltip"> Studio Ghibli <span class="tooltiptext"> <div class="textTooltip">Studio Ghibli, Inc. is a Japanese animation film studio based in Koganei, Tokyo, Japan. The studio is best known for its anime feature films, and has also produced several short films, television commercials, and one television film.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/225689750" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                    <tr>
+                        <td><ul><div class="font1">One Summer's Day</div><br>
+                            <div class="font2"><div class="tooltip"> Studio Ghibli <span class="tooltiptext"> <div class="textTooltip">Studio Ghibli, Inc. is a Japanese animation film studio based in Koganei, Tokyo, Japan. The studio is best known for its anime feature films, and has also produced several short films, television commercials, and one television film.</span></div></div></div></ul></td>
+                        <th>
+                            <iframe src="https://player.vimeo.com/video/222029952" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </th>                   
+                    </tr>
+                </table>                
+            </div>
+        </div>
+    </body> 
+</html>
